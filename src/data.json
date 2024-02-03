@@ -1,0 +1,98 @@
+[
+  {
+    "productId": 1,
+    "productName": "Adidas forums ",
+    "price": "$20",
+    "quantity": "In-Stock",
+    "category": "adidas",
+    "image": "images/adidas_forums.png"
+  },
+  {
+    "productId": 2,
+    "productName": "Adidas Dassslers",
+    "price": "$30",
+    "quantity": "Out of-Stock",
+    "category": "adidas",
+    "image": "images/adidas_dasslers.png"
+  },
+  {
+    "productId": 3,
+    "productName": "Adidas Runfalcon",
+    "price": "$40",
+    "quantity": "In-Stock",
+    "category": "adidas",
+    "image": "images/adidas_runfalcon.png"
+  },
+  {
+    "productId": 4,
+    "productName": "Nike Dunk",
+    "price": "$50",
+    "quantity": "In-Stock",
+    "category": "nike",
+    "image": "images/nikeoffwhite.png"
+  },
+  {
+    "productId": 5,
+    "productName": "Nike Air",
+    "price": "$60",
+    "quantity": "Out of-Stock",
+    "category": "nike",
+    "image": "images/nike_air.png"
+  },
+  {
+    "productId": 6,
+    "productName": "Nike Off-white",
+    "price": "$20",
+    "quantity": "In-Stock",
+    "category": "nike",
+    "image": "images/nike3.png"
+  },
+  {
+    "productId": 7,
+    "productName": "New Balance 550",
+    "price": "$30",
+    "quantity": "In-Stock",
+    "category": "nb",
+    "image": "images/nb1.png"
+  },
+  {
+    "productId": 8,
+    "productName": "New Balance Foam",
+    "price": "$40",
+    "quantity": "Out of-Stock",
+    "category": "nb",
+    "image": "images/nb2.png"
+  },
+  {
+    "productId": 9,
+    "productName": "New Balance 996",
+    "price": "$50",
+    "quantity": "In-Stock",
+    "category": "nb",
+    "image": "images/nb3.png"
+  },
+  {
+    "productId": 10,
+    "productName": "Puma Candy",
+    "price": "$60",
+    "quantity": "In-Stock",
+    "category": "puma",
+    "image": "images/puma1.png"
+  },
+  {
+    "productId": 11,
+    "productName": "Puma Caven",
+    "price": "$40",
+    "quantity": "Out of-Stock",
+    "category": "puma",
+    "image": "images/puma2.png"
+  },
+  {
+    "productId": 12,
+    "productName": "Puma 5000",
+    "price": "$30",
+    "quantity": "In-Stock",
+    "category": "puma",
+    "image": "images/puma3.png"
+  }
+]
