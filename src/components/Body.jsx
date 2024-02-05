@@ -189,17 +189,17 @@ const Body = () => {
       </div>
       {renderNoResultsMessage()}
       <ReactPaginate
-        className="flex justify-center items-center mt-8 space-x-4 p-3 mx-auto"
+        className="flex justify-center items-center mt-8 space-x-6 p-3 mx-auto "
         previousLabel={"Previous"}
         nextLabel={"Next"}
         pageCount={pageCount}
         onPageChange={changePage}
         containerClassName={"pagination"}
-        previousLinkClassName={"pagination__link"}
-        nextLinkClassName={"pagination__link"}
-        disabledClassName={"pagination__link--disabled"}
-        activeClassName={"pagination__link--active"}
-        pageLinkClassName={"pagination__link"}
+        previousLinkClassName={" text-black p-2 rounded border border-black "}
+        nextLinkClassName={" text-black p-2 rounded border border-black"}
+        disabledClassName={"text-black cursor-not-allowed"}
+        activeClassName={"bg-gray-300 text-white p-2 rounded"}
+        pageLinkClassName={"bg-white text-black p-2 rounded"}
         breakClassName={"pagination__break"}
       />
     </div>

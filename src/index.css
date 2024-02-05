@@ -10,35 +10,3 @@
     font-family: "Protest Riot", sans-serif;
   }
 }
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
-  padding: 3px;
-  margin: 0 auto;
-}
-
-.pagination__link {
-  cursor: pointer;
-  padding: 8px;
-  margin: 0 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.pagination__link--disabled {
-  color: #aaa;
-  cursor: not-allowed;
-}
-
-.pagination__link--active {
-  color: #007bff;
-}
-
-.pagination__break {
-  padding: 8px;
-  margin: 0 4px;
-}
