@@ -11,11 +11,6 @@
   }
 }
 
-.glassmorphism {
-  background: lightgray;
-  backdrop-filter: blur(60px);
-}
-
 .pagination {
   display: flex;
   justify-content: center;
