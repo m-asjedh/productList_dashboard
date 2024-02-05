@@ -12,7 +12,10 @@ const Header = () => {
       </div>
       <div className="bg-white p-4 rounded-full flex items-center w-[200px] sm:w[300px] lg:w-[400px]">
         <IoSearch size={30} className="mr-3" />
-        <input className="bg-transparent p-2 focus:outline-none w-full "></input>
+        <input
+          placeholder="Search Here... "
+          className="bg-transparent p-2 focus:outline-none w-full "
+        ></input>
       </div>
       <div className="flex  ">
         <RxAvatar size={40} className="mr-2 cursor-pointer" />

@@ -16,7 +16,7 @@ const Body = () => {
       return (
         <div
           key={index}
-          className="border shadow-xl rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-white/80 backdrop-blur-lg"
+          className="border shadow-xl rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 glassmorphism "
         >
           <img
             src={item.image}
