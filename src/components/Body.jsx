@@ -1,23 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../index.css";
 import ReactPaginate from "react-paginate";
 import data from "../data.json";
 import { IoSearch } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../store/reducers/productsSlice";
+import { setSearchQuery } from "../store/reducers/searchSlice";
 
 const Body = () => {
-  const [products, setProducts] = useState(data.slice(0, 12));
-  const [pageNumber, setPageNumber] = useState(0);
-  const [searchQuery, setSearchQuery] = useState("");
+  // Redux hooks
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.products);
+  const searchQuery = useSelector((state) => state.search.searchQuery);
 
+  // Local state
+  const [pageNumber, setPageNumber] = useState(0);
+
+  // Effects
+  useEffect(() => {
+    dispatch(setProducts(data));
+  }, [dispatch]);
+
+  // Handlers
+  const handleSearch = (event) => {
+    dispatch(setSearchQuery(event.target.value));
+    setPageNumber(0);
+  };
+
+  //Brand Filter
+  const filterBrand = (category) => {
+    const filteredData = data.filter((item) => item.category === category);
+    setProducts(filteredData.slice(0, productsPerPage));
+    setPageNumber(0);
+  };
+
+  //Price Filter
+  const filterPrice = (price) => {
+    const filteredData = data.filter((item) => item.price === price);
+    setProducts(filteredData.slice(0, productsPerPage));
+    setPageNumber(0);
+  };
+
+  // Pagination
   const productsPerPage = 4;
   const pagesVisited = pageNumber * productsPerPage;
+  const pageCount = Math.ceil(products.length / productsPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
-  //Filter the search products
+  // Filtered products
   const filteredProducts = products.filter((item) =>
     item.productName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  //Pagination
+  // Display products
   const displayProducts = filteredProducts
     .slice(pagesVisited, pagesVisited + productsPerPage)
     .map((item, index) => (
@@ -28,7 +65,7 @@ const Body = () => {
         <img
           src={item.image}
           alt={item.productName}
-          className="w-full h-[300px] object-cover rounded-t-lg"
+          className="w-full h-[300px] object-cover rounded-t-lg "
         />
         <div className="p-4">
           <h1 className="text-xl font-semibold text-gray-800 mb-2">
@@ -55,33 +92,7 @@ const Body = () => {
       </div>
     ));
 
-  const pageCount = Math.ceil(filteredProducts.length / productsPerPage);
-
-  const changePage = ({ selected }) => {
-    setPageNumber(selected);
-  };
-
-  //Brand Filter
-  const filterBrand = (category) => {
-    const filteredData = data.filter((item) => item.category === category);
-    setProducts(filteredData.slice(0, productsPerPage));
-    setPageNumber(0);
-  };
-
-  //Price Filter
-  const filterPrice = (price) => {
-    const filteredData = data.filter((item) => item.price === price);
-    setProducts(filteredData.slice(0, productsPerPage));
-    setPageNumber(0);
-  };
-
-  //Search  Functionality
-  const handleSearch = (event) => {
-    setSearchQuery(event.target.value);
-    setPageNumber(0);
-  };
-
-  //Message  for no results found
+  // Render no results message
   const renderNoResultsMessage = () => {
     if (filteredProducts.length === 0 && searchQuery !== "") {
       return (
@@ -198,8 +209,8 @@ const Body = () => {
         previousLinkClassName={" text-black p-2 rounded border border-black "}
         nextLinkClassName={" text-black p-2 rounded border border-black"}
         disabledClassName={"text-black cursor-not-allowed"}
-        activeClassName={"bg-gray-300 text-white p-2 rounded"}
-        pageLinkClassName={"bg-white text-black p-2 rounded"}
+        activeClassName={"bg-blue-300  text-white p-2 rounded"}
+        pageLinkClassName={"bg-red-200 text-black p-2 rounded"}
         breakClassName={"pagination__break"}
       />
     </div>
