@@ -13,15 +13,15 @@ const Body = () => {
   const products = useSelector((state) => state.products.products);
   const searchQuery = useSelector((state) => state.search.searchQuery);
 
-  // Local state
+  
   const [pageNumber, setPageNumber] = useState(0);
 
-  // Effects
+
   useEffect(() => {
     dispatch(setProducts(data));
   }, [dispatch]);
 
-  // Handlers
+ 
   const handleSearch = (event) => {
     dispatch(setSearchQuery(event.target.value));
     setPageNumber(0);
