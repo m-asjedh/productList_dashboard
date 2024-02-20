@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="max-w-[1640px] mx-auto bg-gradient-to-b from-white via-gray-300 to-gray-500">
+    <div className="w-full mx-auto ">
       <div className="flex items-center justify-center  text-3xl font-bold ">
         Shoe Hub
       </div>

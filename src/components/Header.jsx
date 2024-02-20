@@ -3,7 +3,7 @@ import { RxAvatar } from "react-icons/rx";
 
 const Header = () => {
   return (
-    <div className="w-full mx-auto flex justify-between items-center p-10 bg-gray-500">
+    <div className="w-full mx-auto flex justify-between items-center p-10 ">
       <div>
         <h1 className="text-lg sm:text-1xl lg:text-6xl px-3 font-extrabold font-signature cursor-pointer">
           Shoe Hub
