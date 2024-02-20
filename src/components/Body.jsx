@@ -57,7 +57,7 @@ const Body = () => {
     .map((item, index) => (
       <div
         key={index}
-        className="border shadow-xl rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-white bg-opacity-50 backdrop-blur-lg"
+        className="border shadow-xl rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-white bg-opacity-20 backdrop-blur-sm"
       >
         <img
           src={item.image}
